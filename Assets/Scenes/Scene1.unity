@@ -1180,7 +1180,7 @@ GameObject:
   m_Component:
   - component: {fileID: 891069388}
   - component: {fileID: 891069389}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: InvisibleWall (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1250,7 +1250,7 @@ GameObject:
   m_Component:
   - component: {fileID: 963461439}
   - component: {fileID: 963461440}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: InvisibleWall (0)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1405,7 +1405,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1126591278}
   - component: {fileID: 1126591279}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: InvisibleWall (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1857,7 +1857,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1588462063}
   - component: {fileID: 1588462064}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: InvisibleWall (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -83159,6 +83159,23 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 4571001001141743243}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1898058266
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1898058265}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3bff4a118b0556c43a49438a1c8eefea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rolling: 0
+  timeSienceLastRoll: Infinity
+  rollCooldown: 3
+  rollDistance: 5
+  rollSpeed: 1.5
 --- !u!4 &1955675585 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7750032748571524106, guid: 31935319b22a3444da0743b08d486e4b,
@@ -83174,7 +83191,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1958832357}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: InvisibleWalls
   m_TagString: Untagged
   m_Icon: {fileID: 0}
