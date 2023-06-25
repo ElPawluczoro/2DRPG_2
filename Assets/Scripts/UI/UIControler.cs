@@ -26,12 +26,8 @@ namespace RPG.UI
 
         private void Update()
         {
-            healthBar.value = health.currentHealth;
-            healthBar.maxValue = health.maxHealth;
-
-            rollBar.value = roll.timeSienceLastRoll;
-            rollBar.maxValue = roll.rollCooldown;
-
+            healthBar.GetValues(health.currentHealth, health.maxHealth);
+            rollBar.GetValues(roll.timeSienceLastRoll, roll.rollCooldown);
         }
 
 

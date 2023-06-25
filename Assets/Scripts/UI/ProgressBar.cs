@@ -17,7 +17,8 @@ namespace RPG.UI
 
         private void Update()
         {
-            if(value == 0)
+            if (barText != null) barText.text = value + "/" + maxValue;
+            if (value == 0)
             {
                 bar.transform.localScale = new Vector3(0, 1, 1);
                 return;
@@ -28,9 +29,13 @@ namespace RPG.UI
                 return;
             }
             bar.transform.localScale = new Vector3(value / maxValue, 1, 1);
-            if(barText != null) barText.text = value + "/" + maxValue;
         }
 
+        public void GetValues(float value, float maxValue)
+        {
+            this.value = value;
+            this.maxValue = maxValue;
+        }
 
     }
 }
