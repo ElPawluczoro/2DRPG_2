@@ -21,13 +21,19 @@ namespace RPG.Controll
             float playerX = player.transform.position.x;
             if (transform.position.x < playerX)
             {
-                transform.position += new Vector3(speed * Time.deltaTime, 0, 0);
-                transform.rotation = Quaternion.Euler(0, 0, 0);
+                if (!(playerX - transform.position.x < 1) || Vector3.Distance(transform.position, player.transform.position) < 1)
+                {
+                    transform.position += new Vector3(speed * Time.deltaTime, 0, 0);
+                    transform.rotation = Quaternion.Euler(0, 0, 0);
+                }
             }
             else if(transform.position.x > playerX)
             {
-                transform.position += new Vector3(-speed * Time.deltaTime, 0, 0);
-                transform.rotation = Quaternion.Euler(0, 180, 0);
+                if (!(transform.position.x - playerX < 1) || Vector3.Distance(transform.position, player.transform.position) < 1)
+                {
+                    transform.position += new Vector3(-speed * Time.deltaTime, 0, 0);
+                    transform.rotation = Quaternion.Euler(0, 180, 0);
+                }
             }
 
             float playerY = player.transform.position.y;

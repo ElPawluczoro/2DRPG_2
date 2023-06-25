@@ -145,6 +145,7 @@ GameObject:
   - component: {fileID: 4571001001395371179}
   - component: {fileID: 4571001001395371177}
   - component: {fileID: 4571001001395371176}
+  - component: {fileID: 1898058266}
   m_Layer: 6
   m_Name: Player_Knight
   m_TagString: Player
@@ -342,6 +343,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentHealth: 0
   maxHealth: 20
+  dead: 0
 --- !u!114 &4571001001395371176
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -354,3 +356,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cdb887a55195ccb4f992a8c18555edf7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1898058266
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4571001001395371154}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3bff4a118b0556c43a49438a1c8eefea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rolling: 0
+  timeSienceLastRoll: Infinity
+  rollCooldown: 3
+  rollDistance: 5
+  rollSpeed: 1.5
