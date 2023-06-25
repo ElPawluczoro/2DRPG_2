@@ -1,4 +1,5 @@
 using RPG.Combat;
+using RPG.Stats.Enemy;
 using UnityEngine;
 
 namespace RPG.Controll
@@ -15,6 +16,11 @@ namespace RPG.Controll
             GetComponent<Animator>().SetTrigger("Death");
             GetComponent<BoxCollider2D>().enabled = false;
             GetComponent<Health>().dead = true;
+            EnemyXP enemyXp = GetComponent<EnemyXP>();
+            if (enemyXp != null)
+            {
+                enemyXp.GiveXPForPlayer();
+            }
         }
 
     }

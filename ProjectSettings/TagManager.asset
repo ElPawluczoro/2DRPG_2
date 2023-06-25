@@ -16,7 +16,7 @@ TagManager:
   - Enemy
   - DamageArea
   - UninteractableObjects
-  - 
+  - EnemyToEnemyCollider
   - 
   - 
   - 
