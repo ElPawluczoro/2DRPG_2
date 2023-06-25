@@ -5,8 +5,8 @@ namespace RPG.Combat
 {
     public class Health : MonoBehaviour
     {
-        public int currentHealth;
-        public int maxHealth = 5;
+        public float currentHealth;
+        public float maxHealth = 5;
         public bool dead = false;
 
         private void Start()
