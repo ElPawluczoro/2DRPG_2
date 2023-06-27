@@ -1,4 +1,5 @@
 using RPG.Combat;
+using RPG.UI;
 using UnityEngine;
 
 namespace RPG.Controll
@@ -6,6 +7,8 @@ namespace RPG.Controll
     public class PlayerControler : AbstractController
     {
 
+        [SerializeField] private Camera mainCamera;
+        
         Roll roll;
         private void Start()
         {
@@ -14,7 +17,6 @@ namespace RPG.Controll
 
         private void Update()
         {
-
             if(GetComponent<Health>().currentHealth == 0)
             {
                 StartAction(GetComponent<Death>());
@@ -26,9 +28,14 @@ namespace RPG.Controll
                 StartAction(roll);
                 return;
             }
-
             if (Input.GetMouseButton(0))
             {
+                Ray ray = mainCamera.ScreenPointToRay(Input.mousePosition);
+                RaycastHit hit;
+                if (Physics.Raycast(ray, out hit))
+                {
+                    if (hit.collider.transform.CompareTag("UI")) return;
+                }
                 StartAction(GetComponent<Attack>());
                 return;
             }

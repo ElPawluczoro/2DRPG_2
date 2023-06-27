@@ -1,4 +1,5 @@
 using System.Collections;
+using RPG.Stats;
 using UnityEngine;
 
 namespace RPG.Combat
@@ -6,11 +7,12 @@ namespace RPG.Combat
     public class Health : MonoBehaviour
     {
         public float currentHealth;
-        public float maxHealth = 5;
+        public float maxHealth;
         public bool dead = false;
 
         private void Start()
         {
+            maxHealth = GetComponent<BasicStats>().healthPoints;
             currentHealth = maxHealth;
         }
 

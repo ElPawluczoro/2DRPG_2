@@ -3,8 +3,10 @@ using RPG.Controll;
 using RPG.Stats.Player;
 using System.Collections;
 using System.Collections.Generic;
+using RPG.Stats;
 using TMPro;
 using UnityEngine;
+using Material = RPG.Equipment.Materials.Material;
 
 namespace RPG.UI
 {
@@ -13,14 +15,20 @@ namespace RPG.UI
         private Health health;
         private Roll roll;
         private PlayerEXP playerEXP;
+        private BasicStats stats;
 
-        [SerializeField] ProgressBar healthBar;
-        [SerializeField] ProgressBar rollBar;
-        [SerializeField] ProgressBar xpBar;
+        [SerializeField] private ProgressBar healthBar;
+        [SerializeField] private ProgressBar rollBar;
+        [SerializeField] private ProgressBar xpBar;
+
+        [SerializeField] private TMP_Text adText;
+        [SerializeField] private TMP_Text apText;
+        [SerializeField] private TMP_Text armorText;
+        [SerializeField] private TMP_Text magicResistanceText;
 
         [SerializeField] TMP_Text levelText;
 
-
+    
 
         private void Start()
         {
@@ -28,6 +36,7 @@ namespace RPG.UI
             health = player.GetComponent<Health>();
             roll = player.GetComponent<Roll>();
             playerEXP = player.GetComponent<PlayerEXP>();
+            stats = player.GetComponent<BasicStats>();
         }
 
 
@@ -37,10 +46,13 @@ namespace RPG.UI
             rollBar.GetValues(roll.timeSienceLastRoll, roll.rollCooldown);
             xpBar.GetValues(playerEXP.playerXP, playerEXP.playerMaxXP);
             levelText.text = playerEXP.playerLevel.ToString();
+
+            adText.text = stats.attackDamage.ToString();
+            apText.text = stats.abilityPower.ToString();
+            armorText.text = stats.armor.ToString();
+            magicResistanceText.text = stats.magicResistance.ToString();
+
         }
-
-
-
 
     }
 }

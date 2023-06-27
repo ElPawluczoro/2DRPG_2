@@ -29,6 +29,8 @@ AnimationClip:
       value: {fileID: 763323381, guid: dd7e046c079aefa40a57b1d98a5f849f, type: 3}
     - time: 0.06666667
       value: {fileID: -2108711273, guid: dd7e046c079aefa40a57b1d98a5f849f, type: 3}
+    - time: 0.083333336
+      value: {fileID: -2108711273, guid: dd7e046c079aefa40a57b1d98a5f849f, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -53,12 +55,13 @@ AnimationClip:
     - {fileID: -336734618, guid: dd7e046c079aefa40a57b1d98a5f849f, type: 3}
     - {fileID: 763323381, guid: dd7e046c079aefa40a57b1d98a5f849f, type: 3}
     - {fileID: -2108711273, guid: dd7e046c079aefa40a57b1d98a5f849f, type: 3}
+    - {fileID: -2108711273, guid: dd7e046c079aefa40a57b1d98a5f849f, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.083333336
+    m_StopTime: 0.1
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -80,6 +83,13 @@ AnimationClip:
   m_Events:
   - time: 0.06666667
     functionName: DealDamage
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 0.1
+    functionName: CancelAttackAnimation
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0

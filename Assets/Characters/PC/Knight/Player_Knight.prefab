@@ -146,6 +146,8 @@ GameObject:
   - component: {fileID: 4571001001395371177}
   - component: {fileID: 4571001001395371176}
   - component: {fileID: 1898058266}
+  - component: {fileID: 1898058277}
+  - component: {fileID: 1898058289}
   m_Layer: 6
   m_Name: Player_Knight
   m_TagString: Player
@@ -342,7 +344,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentHealth: 0
-  maxHealth: 20
+  maxHealth: 500
   dead: 0
 --- !u!114 &4571001001395371176
 MonoBehaviour:
@@ -373,3 +375,37 @@ MonoBehaviour:
   rollCooldown: 3
   rollDistance: 5
   rollSpeed: 1.5
+--- !u!114 &1898058277
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4571001001395371154}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10c1f6f793db69248939707f372a08a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  expForLevels: {fileID: 11400000, guid: f7374ef153f27044ca8374faa77003c1, type: 2}
+  playerLevel: 0
+  playerXP: 0
+  playerMaxXP: 0
+--- !u!114 &1898058289
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4571001001395371154}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4f986afe7689aa41818ab2293aebcf2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackDamage: 5
+  abilityPower: 0
+  healthPoints: 100
+  manaPoints: 0
+  armor: 15
+  magicResistance: 15

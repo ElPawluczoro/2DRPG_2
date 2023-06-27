@@ -1,20 +1,27 @@
+using System;
 using System.Collections.Generic;
+using RPG.Stats;
 using UnityEngine;
 
 namespace RPG.Combat
 {
     public class DamageDealer : MonoBehaviour
     {
-        public int damage = 3;
-        //public GameObject DamageArea;
+        public int damage;
         public List<GameObject> targetToDamage = new List<GameObject>();
+
+        private void Start()
+        {
+            damage = transform.parent.GetComponent<BasicStats>().attackDamage;
+        }
+
         public void DealDamage()
         {
             if(targetToDamage != null)
             {
                 foreach(GameObject target in targetToDamage)
                 {
-                    if (gameObject.transform.parent.tag == "Enemy" && target.tag == "Enemy") continue;
+                    if (gameObject.transform.parent.CompareTag("Enemy") && target.CompareTag("Enemy")) continue;
                     target.GetComponent<Health>().GetDamage(damage);
                 }
             }

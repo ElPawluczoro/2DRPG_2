@@ -27,7 +27,7 @@ namespace RPG.Controll
             {
                 GetComponent<Animator>().SetBool("Attack", true);
                 timeScienceLastAttack = 0;
-                StartCoroutine(CancelAttackAnimation());
+                //StartCoroutine(CRCancelAttackAnimation());
             }
         }
 
@@ -45,9 +45,14 @@ namespace RPG.Controll
             }
         }
 
-        public IEnumerator CancelAttackAnimation()
+        public IEnumerator CRCancelAttackAnimation()
         {
             yield return new WaitForSeconds(0.5f);
+            GetComponent<Animator>().SetBool("Attack", false);
+        }
+        
+        public void CancelAttackAnimation()
+        {
             GetComponent<Animator>().SetBool("Attack", false);
         }
 
