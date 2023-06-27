@@ -8,6 +8,7 @@ TagManager:
   - UI
   - UIControler
   - MaterialControler
+  - GoldControler
   layers:
   - Default
   - TransparentFX
