@@ -9,6 +9,9 @@ TagManager:
   - UIControler
   - MaterialControler
   - GoldControler
+  - NPC
+  - DialogueControler
+  - Dialogue
   layers:
   - Default
   - TransparentFX
@@ -21,7 +24,7 @@ TagManager:
   - DamageArea
   - UninteractableObjects
   - EnemyToEnemyCollider
-  - 
+  - NPC
   - 
   - 
   - 

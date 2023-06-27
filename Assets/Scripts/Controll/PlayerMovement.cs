@@ -5,7 +5,6 @@ namespace RPG.Controll
     public class PlayerMovement : MonoBehaviour, IAction
     {
         [SerializeField] private float speed = 2;
-        [SerializeField] private float timeBeetwenAttacks = 1;
 
         private bool canMove = true;
 
