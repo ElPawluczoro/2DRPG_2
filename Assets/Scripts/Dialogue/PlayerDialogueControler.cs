@@ -16,7 +16,7 @@ namespace RPG.Dialogue
         private GameObject activeNPC;
         private void Update()
         {
-            if (npcInRange && Input.GetKeyDown(KeyCode.E))
+            if (npcInRange && Input.GetKeyDown(KeyCode.E) && !dialogueCanvas.activeSelf)
             {
                 dialogueCanvas.SetActive(true);
                 var dialogueController = activeNPC.GetComponent<NPCDialogueControler>();
@@ -27,9 +27,8 @@ namespace RPG.Dialogue
 
             if (dialogueCanvas.activeSelf && !npcInRange)
             {
-                dialogueCanvas.SetActive(false);
+                dialogueCanvas.GetComponent<DialogueCanvasControler>().CloseDialogueCanvas();
             }
-            print(npcInRange);
         }
 
         private void OnTriggerEnter2D(Collider2D other)
