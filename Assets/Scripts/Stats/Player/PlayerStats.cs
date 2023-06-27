@@ -17,6 +17,11 @@ namespace RPG.Stats.Player
 
         private void Start()
         {
+            //UpdateStats();
+        }
+
+        private void Awake()
+        {
             UpdateStats();
         }
 

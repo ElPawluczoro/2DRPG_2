@@ -305,7 +305,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48304b720e0ced14abf01cac0556bf53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyXP: 23
+  enemyXP: 5
 --- !u!114 &2006768497
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -482,3 +482,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 0
   targetToDamage: []
+  damageGO: {fileID: 3484939113011156780, guid: 0a55aa62a6325e6498883e9450214e09,
+    type: 3}

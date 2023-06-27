@@ -185,6 +185,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 0
   targetToDamage: []
+  damageGO: {fileID: 3484939113011156780, guid: 0a55aa62a6325e6498883e9450214e09,
+    type: 3}
 --- !u!1 &4351830543182411748
 GameObject:
   m_ObjectHideFlags: 0

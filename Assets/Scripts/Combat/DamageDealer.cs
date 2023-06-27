@@ -10,9 +10,14 @@ namespace RPG.Combat
         public int damage;
         public List<GameObject> targetToDamage = new List<GameObject>();
 
+        private Damage damageType;
+
+        public GameObject damageGO;
+
         private void Start()
         {
             damage = transform.parent.GetComponent<BasicStats>().attackDamage;
+            damageType = damageGO.GetComponent<Damage>();
         }
 
         public void DealDamage()
@@ -22,7 +27,8 @@ namespace RPG.Combat
                 foreach(GameObject target in targetToDamage)
                 {
                     if (gameObject.transform.parent.CompareTag("Enemy") && target.CompareTag("Enemy")) continue;
-                    target.GetComponent<Health>().GetDamage(damage);
+                    //target.GetComponent<Health>().GetDamage(damage);
+                    damageType.DealDamage(damage, target);
                 }
             }
         }
