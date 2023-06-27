@@ -12,6 +12,7 @@ TagManager:
   - NPC
   - DialogueControler
   - Dialogue
+  - ItemSlot
   layers:
   - Default
   - TransparentFX

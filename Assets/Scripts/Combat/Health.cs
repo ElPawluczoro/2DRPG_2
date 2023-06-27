@@ -12,8 +12,13 @@ namespace RPG.Combat
 
         private void Start()
         {
-            maxHealth = GetComponent<BasicStats>().healthPoints;
+            UpdateHealth();
             currentHealth = maxHealth;
+        }
+
+        public void UpdateHealth()
+        {
+            maxHealth = GetComponent<BasicStats>().healthPoints;
         }
 
         public void GetDamage(int damage)
