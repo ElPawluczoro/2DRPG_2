@@ -6,7 +6,7 @@ using UnityEngine.PlayerLoop;
 
 namespace RPG.UI
 {
-    public class MaterialsPanelControler : MonoBehaviour
+    public class MaterialsPanelControler : MonoBehaviour, ICloseableUIElement
     {
         [SerializeField] private BoxCollider materialsPanelCollider;
 
@@ -30,7 +30,13 @@ namespace RPG.UI
             canvas.enabled = !canvas.enabled;
             materialsPanelCollider.enabled = !materialsPanelCollider.enabled;
         }
-        
-        
+
+
+        public void Close()
+        {
+            var canvas = GetComponent<Canvas>();
+            canvas.enabled = false;
+            materialsPanelCollider.enabled = false;
+        }
     }   
 }

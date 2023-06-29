@@ -1,5 +1,6 @@
 using RPG.Combat;
 using RPG.Stats.Player;
+using RPG.UI;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -12,22 +13,38 @@ namespace RPG.Equipment.Items
         [SerializeField] private GameObject itemChooseMenuContent;
         [SerializeField] private GameObject itemChooseMenu;
         [SerializeField] private PlayerItems playerItems;
-        [SerializeField] private GameObject itemInMenuPrefab;
+
+        private ItemMenu itemMenu;
+
+        private void Start()
+        {
+            itemMenu = itemChooseMenu.GetComponent<ItemMenu>();
+        }
 
         public void ShowItemChooseMenu()
         {
-            OpenItemChooseMenu();
+            itemMenu.OpenItemChooseMenu(this);
         }
 
         private void Update()
         {
             if (itemChooseMenuContent.activeSelf && Input.GetKey(KeyCode.Escape))
             {
-                CloseItemChooseMenu();
+                itemMenu.CloseItemChooseMenu();
             }
         }
 
         public void CloseItemChooseMenu()
+        {
+            itemMenu.CloseItemChooseMenu();
+        }
+
+        public void OpenItemChooseMenu()
+        {
+            itemMenu.OpenItemChooseMenu(this);
+        }
+        
+        /*public void CloseItemChooseMenu()
         {
             for (int i = 0; i < itemChooseMenuContent.transform.childCount; i++)
             {
@@ -53,7 +70,7 @@ namespace RPG.Equipment.Items
                 itemInMenu.SetItemProperties(pI[i]);
                 itemInMenu.activeItemSlot = this;
             }
-        }
+        }*/
 
         public void UpdateItemStats()
         {

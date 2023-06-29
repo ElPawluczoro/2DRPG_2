@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using RPG.UI;
 using UnityEngine;
 
 namespace RPG.Equipment.Items
@@ -73,6 +74,11 @@ namespace RPG.Equipment.Items
             }
 
             return magicResistance;
+        }
+
+        public void AddBoughtItem(Item item)
+        {
+            playerBoughtItems.Add(item);
         }
         
 

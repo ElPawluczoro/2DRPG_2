@@ -18,11 +18,11 @@ namespace RPG.Dialogue
         {
             if (npcInRange && Input.GetKeyDown(KeyCode.E) && !dialogueCanvas.activeSelf)
             {
-                dialogueCanvas.SetActive(true);
                 var dialogueController = activeNPC.GetComponent<NPCDialogueControler>();
+                dialogueCanvas.GetComponent<DialogueCanvasControler>().OpenDialogueCanvas();
                 npcName.text = dialogueController.npcName + ":";
                 npcDialogueText.text = dialogueController.welcomeMessage;
-                activeNPC.GetComponent<NPCDialogueControler>().InitiateDialogues();
+                dialogueController.InitiateDialogues();
             }
 
             if (dialogueCanvas.activeSelf && !npcInRange)

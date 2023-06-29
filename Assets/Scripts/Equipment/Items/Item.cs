@@ -19,5 +19,6 @@ namespace RPG.Equipment.Items
 
         public Sprite itemSprite;
 
+
     }   
 }

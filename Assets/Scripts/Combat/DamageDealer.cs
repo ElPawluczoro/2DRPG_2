@@ -11,13 +11,19 @@ namespace RPG.Combat
         public List<GameObject> targetToDamage = new List<GameObject>();
 
         private Damage damageType;
+        private BasicStats basicStats;
 
         public GameObject damageGO;
 
         private void Start()
         {
-            damage = transform.parent.GetComponent<BasicStats>().attackDamage;
+            basicStats = transform.parent.GetComponent<BasicStats>();
             damageType = damageGO.GetComponent<Damage>();
+        }
+
+        private void Update()
+        {
+            damage = basicStats.attackDamage;
         }
 
         public void DealDamage()

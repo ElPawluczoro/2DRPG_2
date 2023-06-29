@@ -13,6 +13,8 @@ TagManager:
   - DialogueControler
   - Dialogue
   - ItemSlot
+  - StoreControler
+  - CanvasManager
   layers:
   - Default
   - TransparentFX

@@ -13,6 +13,11 @@ namespace RPG.Equipment.Materials
             gold += amount;
         }
 
+        public void SpendGold(int amount)
+        {
+            gold -= amount;
+        }
+
 
     }
 }

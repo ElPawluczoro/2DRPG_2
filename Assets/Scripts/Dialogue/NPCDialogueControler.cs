@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using RPG.Stores;
 using TMPro;
 using UnityEngine;
 
@@ -20,7 +21,12 @@ namespace RPG.Dialogue
             {
                 var newDialogue = Instantiate(dialoguePrefab, GameObject.FindGameObjectWithTag("DialogueControler").transform);
                 newDialogue.transform.GetChild(0).GetComponent<TMP_Text>().text = dialogue.playerText;
-                newDialogue.GetComponent<DialogueButton>().dialogue = dialogue;
+                var dialogueButton = newDialogue.GetComponent<DialogueButton>();
+                dialogueButton.dialogue = dialogue;
+                if (dialogue.openStore)
+                {
+                    dialogueButton.store = GetComponent<Store>();
+                }
             }
         }
 
