@@ -13,11 +13,13 @@ namespace RPG.Equipment.Items
         [SerializeField] private GameObject itemChooseMenuContent;
         [SerializeField] private GameObject itemChooseMenu;
         [SerializeField] private PlayerItems playerItems;
+        [SerializeField] private MainUIItemsPanel mainUIItemsPanel;
 
         private ItemMenu itemMenu;
 
         private void Start()
         {
+            if (!itemChooseMenu) return;
             itemMenu = itemChooseMenu.GetComponent<ItemMenu>();
         }
 
@@ -28,6 +30,7 @@ namespace RPG.Equipment.Items
 
         private void Update()
         {
+            if (!itemChooseMenu) return;
             if (itemChooseMenuContent.activeSelf && Input.GetKey(KeyCode.Escape))
             {
                 itemMenu.CloseItemChooseMenu();
@@ -43,34 +46,6 @@ namespace RPG.Equipment.Items
         {
             itemMenu.OpenItemChooseMenu(this);
         }
-        
-        /*public void CloseItemChooseMenu()
-        {
-            for (int i = 0; i < itemChooseMenuContent.transform.childCount; i++)
-            {
-                Destroy(itemChooseMenuContent.transform.GetChild(i).gameObject);
-            }
-            itemChooseMenu.SetActive(false);
-        }
-
-        public void OpenItemChooseMenu()
-        {
-            
-            if (itemChooseMenuContent.activeSelf) CloseItemChooseMenu();
-            var pI = playerItems.playerBoughtItems;
-            itemChooseMenu.SetActive(true);
-            var xPos = Camera.main.ScreenToWorldPoint(Input.mousePosition).x;
-            var yPos = Camera.main.ScreenToWorldPoint(Input.mousePosition).y;
-            
-            itemChooseMenu.transform.position = new Vector3(xPos + 1.2f, yPos + 1.4f, 0);
-            for (int i = 0; i < pI.Count; i++)
-            {
-                var newItem = Instantiate(itemInMenuPrefab, itemChooseMenuContent.transform);
-                var itemInMenu = newItem.GetComponent<ItemInMenu>();
-                itemInMenu.SetItemProperties(pI[i]);
-                itemInMenu.activeItemSlot = this;
-            }
-        }*/
 
         public void UpdateItemStats()
         {
@@ -111,6 +86,11 @@ namespace RPG.Equipment.Items
         public void UpdateItemSlot()
         {
             GetComponent<Image>().sprite = itemInSlot.itemSprite;
+        }
+
+        public void UpdateItemsInSlot()
+        {
+            mainUIItemsPanel.UpdateItemsInSlot();
         }
     }   
 }

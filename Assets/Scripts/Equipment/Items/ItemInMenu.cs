@@ -1,3 +1,4 @@
+using RPG.UI;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -30,6 +31,8 @@ namespace RPG.Equipment.Items
             activeItemSlot.CloseItemChooseMenu();
 
             activeItemSlot.UpdateItemStats();
+            
+            activeItemSlot.UpdateItemsInSlot();
         }
         
         
