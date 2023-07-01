@@ -12,13 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6934a4547ce42ed44954f0461b2eb337, type: 3}
   m_Name: MediumLifePotion
   m_EditorClassIdentifier: 
-  potionName: SamplePotion2
+  potionName: Medium Life Potion
   potionSprite: {fileID: -1444343117, guid: 6abfb2607856e0c4aa6b0e91f0818efe, type: 3}
   emptyPotionSprite: {fileID: 875776443, guid: 6abfb2607856e0c4aa6b0e91f0818efe, type: 3}
   potionType: 0
-  potionPower: 500
+  potionPower: 600
   potionStacks: 5
-  upgradeGoldCost: 250
-  upgradeGlassesOfWineCost: 5
+  upgradeGoldCost: 10000
+  upgradeGlassesOfWineCost: 25
   nextLevelPotion: {fileID: 11400000, guid: 8ef603e700860404ea1fb840e7c8b1c1, type: 2}
   maxLevel: 0

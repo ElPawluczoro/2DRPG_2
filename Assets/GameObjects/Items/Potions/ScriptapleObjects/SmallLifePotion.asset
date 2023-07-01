@@ -12,14 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6934a4547ce42ed44954f0461b2eb337, type: 3}
   m_Name: SmallLifePotion
   m_EditorClassIdentifier: 
-  potionName: SamplePotion
+  potionName: Small Life Potion
   potionSprite: {fileID: 2096541686, guid: 6abfb2607856e0c4aa6b0e91f0818efe, type: 3}
   emptyPotionSprite: {fileID: -1490356905, guid: 6abfb2607856e0c4aa6b0e91f0818efe,
     type: 3}
   potionType: 0
-  potionPower: 300
+  potionPower: 250
   potionStacks: 5
-  upgradeGoldCost: 150
-  upgradeGlassesOfWineCost: 5
+  upgradeGoldCost: 1000
+  upgradeGlassesOfWineCost: 10
   nextLevelPotion: {fileID: 11400000, guid: cdcfca6370e51544886915684dd85d39, type: 2}
   maxLevel: 0
