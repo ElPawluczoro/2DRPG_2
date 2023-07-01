@@ -17,7 +17,7 @@ namespace RPG.UI
 
         private void Update()
         {
-            if (barText != null) barText.text = value + "/" + maxValue;
+            if (barText != null) barText.text = (int)value + "/" + (int)maxValue;
             if (value == 0)
             {
                 bar.transform.localScale = new Vector3(0, 1, 1);

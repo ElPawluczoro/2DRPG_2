@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using RPG.Equipment.Items;
 using UnityEditor.PackageManager;
 using UnityEngine;
 
@@ -43,13 +44,34 @@ namespace RPG.UI
         public void EnablePanelOrDisablePanel()
         {
             var canvas = GetComponent<Canvas>();
-            canvas.enabled = !canvas.enabled;
-            eqCollider.enabled = !eqCollider.enabled;
+            if (canvas.enabled)
+            {
+                Close();
+            }
+            else
+            {
+                canvas.enabled = true;
+                eqCollider.enabled = true;
+                var items = transform.GetChild(0).GetChild(1).gameObject;
+                for (int i = 0; i < items.transform.childCount; i++)
+                {
+                    var itemSlot = items.transform.GetChild(i).GetComponent<ItemSlot>();
+                    if(!itemSlot) continue;
+                    itemSlot.ActivateBoxCollider();
+                }   
+            }
         }
 
         public void Close()
         {
             var canvas = GetComponent<Canvas>();
+            var items = transform.GetChild(0).GetChild(1).gameObject;
+            for (int i = 0; i < items.transform.childCount; i++)
+            {
+                var itemSlot = items.transform.GetChild(i).GetComponent<ItemSlot>();
+                if(!itemSlot) continue;
+                itemSlot.DeactivateBoxCollider();
+            }
             canvas.enabled = false;
             eqCollider.enabled = false;
         }

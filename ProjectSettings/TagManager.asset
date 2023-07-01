@@ -15,6 +15,10 @@ TagManager:
   - ItemSlot
   - StoreControler
   - CanvasManager
+  - ItemTooltip
+  - MethodsHolder
+  - PotionStack
+  - PotionHolder
   layers:
   - Default
   - TransparentFX

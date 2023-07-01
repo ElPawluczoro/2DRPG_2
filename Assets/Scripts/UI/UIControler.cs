@@ -3,6 +3,7 @@ using RPG.Controll;
 using RPG.Stats.Player;
 using System.Collections;
 using System.Collections.Generic;
+using RPG.Equipment.Items;
 using RPG.Stats;
 using TMPro;
 using UnityEngine;
@@ -28,6 +29,8 @@ namespace RPG.UI
 
         [SerializeField] TMP_Text levelText;
 
+        public GameObject itemTooltip;
+
     
 
         private void Start()
@@ -51,6 +54,27 @@ namespace RPG.UI
             apText.text = stats.abilityPower.ToString();
             armorText.text = stats.armor.ToString();
             magicResistanceText.text = stats.magicResistance.ToString();
+
+            var mousePosition = Input.mousePosition;
+            Ray ray = Camera.main.ScreenPointToRay(mousePosition);
+            RaycastHit hit;
+            if (Physics.Raycast(ray, out hit))
+            {
+                var itemSlot = hit.transform.gameObject.GetComponent<ItemSlot>();
+                if (itemSlot != null)
+                {
+                    itemSlot.ShowItemTooltip(mousePosition);
+                }
+                else
+                {
+                    itemTooltip.SetActive(false);
+                }
+            }
+            else
+            {
+                itemTooltip.SetActive(false);
+            }
+
 
         }
 

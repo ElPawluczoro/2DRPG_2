@@ -209,6 +209,7 @@ GameObject:
   - component: {fileID: 6334712459096887441}
   - component: {fileID: 6334712459096887442}
   - component: {fileID: 8016414592610724401}
+  - component: {fileID: 5532876343563946421}
   m_Layer: 7
   m_Name: King
   m_TagString: Enemy
@@ -484,3 +485,19 @@ MonoBehaviour:
   goldGiven: 0
   minGold: 20
   maxGold: 35
+--- !u!114 &5532876343563946421
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4351830543182411748}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d1cafb1b4aef92459d3a667f4d5bd8e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  potionStackGO: {fileID: 8572838376864550930, guid: 463482f7377c080488a9b3d444ba04ef,
+    type: 3}
+  chance: 100
+  amount: 2

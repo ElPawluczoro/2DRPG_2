@@ -37,5 +37,14 @@ namespace RPG.Combat
             GetComponent<SpriteRenderer>().color = Color.white;
         }
 
+        public void RestoreHealth(int amount)
+        {
+            currentHealth += amount;
+            if (currentHealth > maxHealth)
+            {
+                currentHealth = maxHealth;
+            }
+        }
+
     }
 }
