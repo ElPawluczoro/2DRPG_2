@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using RPG.Alchemist;
 using RPG.Stores;
 using TMPro;
 using UnityEngine;
@@ -23,7 +24,7 @@ namespace RPG.Dialogue
                 newDialogue.transform.GetChild(0).GetComponent<TMP_Text>().text = dialogue.playerText;
                 var dialogueButton = newDialogue.GetComponent<DialogueButton>();
                 dialogueButton.dialogue = dialogue;
-                if (dialogue.openStore)
+                if (dialogue.opens == Opens.STORE)
                 {
                     dialogueButton.store = GetComponent<Store>();
                 }

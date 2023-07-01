@@ -49,6 +49,29 @@ namespace RPG.Equipment.Materials
              }
          }
      }
+
+     public void SpendMaterial(Material material, int quantity)
+     {
+         foreach (var materialGO in materials)
+         {
+             if (materialGO.GetComponent<MaterialGameObject>().material.materialName == material.materialName)
+             {
+                 materialGO.GetComponent<MaterialGameObject>().SpendMaterial(quantity);
+             }
+         }
+     }
+
+     public bool IsMaterialEnough(Material material, int quantity)
+     {
+         foreach (var materialGO in materials)
+         {
+             var materialGameObject = materialGO.GetComponent<MaterialGameObject>();
+             if (materialGameObject.material.materialName != material.materialName) continue;
+             return materialGameObject.quantity >= quantity;
+         }
+         return false;
+     }
+     
  
      private IEnumerator InstantiatePoopUp(Material material, int quantity)
      {

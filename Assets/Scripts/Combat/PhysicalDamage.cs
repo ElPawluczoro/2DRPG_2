@@ -18,8 +18,7 @@ namespace RPG.Combat
             float damageReduction = targetStats.armor * 0.01f;
             int damage = amount - (int)(amount * damageReduction);
             target.GetComponent<Health>().GetDamage(damage);
-            print(damage);
-            
+
         }
     }
 }

@@ -22,6 +22,11 @@ namespace RPG.Equipment.Materials
         {
             quantity += q;
         }
+
+        public void SpendMaterial(int q)
+        {
+            quantity -= q;
+        }
         
     }   
 }

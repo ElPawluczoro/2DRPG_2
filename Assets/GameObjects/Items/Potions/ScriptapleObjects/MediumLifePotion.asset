@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6934a4547ce42ed44954f0461b2eb337, type: 3}
+  m_Name: MediumLifePotion
+  m_EditorClassIdentifier: 
+  potionName: SamplePotion2
+  potionSprite: {fileID: -1444343117, guid: 6abfb2607856e0c4aa6b0e91f0818efe, type: 3}
+  emptyPotionSprite: {fileID: 875776443, guid: 6abfb2607856e0c4aa6b0e91f0818efe, type: 3}
+  potionType: 0
+  potionPower: 500
+  potionStacks: 5
+  upgradeGoldCost: 250
+  upgradeGlassesOfWineCost: 5
+  nextLevelPotion: {fileID: 11400000, guid: 8ef603e700860404ea1fb840e7c8b1c1, type: 2}
+  maxLevel: 0

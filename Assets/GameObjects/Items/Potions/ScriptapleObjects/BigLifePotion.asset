@@ -10,12 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6934a4547ce42ed44954f0461b2eb337, type: 3}
-  m_Name: SamplePotion
+  m_Name: BigLifePotion
   m_EditorClassIdentifier: 
-  potionName: SamplePotion
-  potionSprite: {fileID: 2096541686, guid: 6abfb2607856e0c4aa6b0e91f0818efe, type: 3}
-  emptyPotionSprite: {fileID: -1490356905, guid: 6abfb2607856e0c4aa6b0e91f0818efe,
+  potionName: SamplePotion3
+  potionSprite: {fileID: -683021115, guid: 6abfb2607856e0c4aa6b0e91f0818efe, type: 3}
+  emptyPotionSprite: {fileID: 1750097285, guid: 6abfb2607856e0c4aa6b0e91f0818efe,
     type: 3}
   potionType: 0
-  potionPower: 300
-  potionStacks: 5
+  potionPower: 1000
+  potionStacks: 4
+  upgradeGoldCost: 0
+  upgradeGlassesOfWineCost: 0
+  nextLevelPotion: {fileID: 0}
+  maxLevel: 1

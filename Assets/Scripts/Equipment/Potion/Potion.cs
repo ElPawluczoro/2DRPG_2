@@ -9,7 +9,7 @@ namespace RPG.Equipment.Potions
 {
     public class Potion : MonoBehaviour
     {
-        [SerializeField] private PotionStats potion;
+        public PotionStats potion;
 
         private int potionPower;
         [SerializeField] private int maxPotionStacks;
@@ -27,9 +27,7 @@ namespace RPG.Equipment.Potions
 
             potionImage = GetComponent<Image>();
 
-            SetPotionProperties();
-            potionStacks = maxPotionStacks;
-            UpdatePotionSprite();
+            UpdatePotion();
 
         }
 
@@ -41,12 +39,22 @@ namespace RPG.Equipment.Potions
             }
         }
 
+        public void UpdatePotion()
+        {
+            SetPotionProperties();
+            potionStacks = maxPotionStacks;
+            UpdatePotionSprite();
+        }
 
+        public void SetPotion(PotionStats potion)
+        {
+            this.potion = potion;
+        }
+        
         private void SetPotionProperties()
         {
             potionPower = potion.potionPower;
             maxPotionStacks = potion.potionStacks;
-            
         }
 
         public void UsePotion()

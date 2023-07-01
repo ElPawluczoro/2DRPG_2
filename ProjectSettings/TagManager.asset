@@ -19,6 +19,7 @@ TagManager:
   - MethodsHolder
   - PotionStack
   - PotionHolder
+  - AlchemistPanel
   layers:
   - Default
   - TransparentFX
@@ -32,7 +33,7 @@ TagManager:
   - UninteractableObjects
   - EnemyToEnemyCollider
   - NPC
-  - 
+  - NotCombatTarget
   - 
   - 
   - 

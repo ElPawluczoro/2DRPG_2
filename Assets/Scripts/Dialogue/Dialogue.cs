@@ -9,6 +9,12 @@ namespace RPG.Dialogue
     {
         public string playerText;
         public string npcText;
-        public bool openStore;
-    }   
+        public Opens opens = Opens.NOTHING;
+    }
+
+    public enum Opens
+    {
+        NOTHING, STORE, ALCHEMIST
+    }
+    
 }

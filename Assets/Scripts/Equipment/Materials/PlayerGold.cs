@@ -18,6 +18,11 @@ namespace RPG.Equipment.Materials
             gold -= amount;
         }
 
+        public bool IsGoldEnough(int valueToCompare)
+        {
+            return valueToCompare <= gold;
+        }
+
 
     }
 }

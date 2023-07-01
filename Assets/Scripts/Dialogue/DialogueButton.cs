@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using RPG.Alchemist;
 using RPG.Stores;
 using TMPro;
 using UnityEngine;
@@ -12,10 +13,15 @@ namespace RPG.Dialogue
         public Store store;
         public void Dialogue()
         {
-            if (dialogue.openStore)
+            if (dialogue.opens == Opens.STORE)
             {
                 GameObject.FindGameObjectWithTag("StoreControler").GetComponent<StoreControler>().OpenStorePanel();
                 store.InitializeStore();
+                return;
+            }
+            else if (dialogue.opens == Opens.ALCHEMIST)
+            {
+                GameObject.FindGameObjectWithTag("AlchemistPanel").GetComponent<AlchemistControler>().Open();
                 return;
             }
             
